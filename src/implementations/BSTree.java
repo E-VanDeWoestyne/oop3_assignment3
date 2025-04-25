@@ -1,5 +1,6 @@
 package implementations;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
@@ -12,8 +13,10 @@ import utilities.Iterator;
  * @author Ethan Van De Woestyne
  * @param <E> The type of elements this tree holds.
  */
-public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E>
+public class BSTree<E extends Comparable<? super E>> implements BSTreeADT<E>, Serializable
 {
+	private static final long serialVersionUID = 1L;
+	
 	private BSTreeNode<E> root;
 	private int size;
 

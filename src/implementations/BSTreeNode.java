@@ -1,5 +1,7 @@
 package implementations;
 
+import java.io.Serializable;
+
 /**
  * Node class for Binary Search Tree implementation. Each node contains an
  * element and references to left and right child nodes.
@@ -7,8 +9,10 @@ package implementations;
  * @author Ethan Van De Woestyne
  * @param <E> The type of element this node holds.
  */
-public class BSTreeNode<E>
+public class BSTreeNode<E> implements Serializable
 {
+	private static final long serialVersionUID = 1L;
+	
 	private E element;
 	private BSTreeNode<E> left;
 	private BSTreeNode<E> right;
